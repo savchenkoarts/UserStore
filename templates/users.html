@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+<a href="/addUser">Add user</a>
+<p>All users:</p>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Date of birth</th>
+    </tr>
+    <#list users as user>
+        <tr>
+            <td>
+                <#if user.id??>${user.id}
+                    <#else>N/A
+                </#if>
+            </td>
+            <td>${user.name}</td>
+            <td>${user.dateOfBirth}</td>
+        </tr>
+    </#list>
+</table>
+
+<form method="POST">
+    <button type="submit">Save to db</button>
+</form>
+
+</body>
+</html>

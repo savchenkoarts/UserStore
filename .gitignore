@@ -1,0 +1,7 @@
+#Ignore
+
+.idea/
+target/
+*.iml
+templates/lab2
+src/ua/savchenko/web2
